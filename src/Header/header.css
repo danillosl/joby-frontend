@@ -1,0 +1,26 @@
+.main-header {
+  background: #424242;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.main-header > h1 {
+  color: white;
+}
+
+.main-header > nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.main-header > nav > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+  background: #747171;
+  padding: 10px 15px;
+  margin: 0 2px;
+}

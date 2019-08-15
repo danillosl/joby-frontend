@@ -1,0 +1,38 @@
+.Component2 {
+  height: 90%;
+  width: 90%;
+}
+
+.Component2 .subnav {
+  background: #0d3015;
+
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.Component2 .subnav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.Component2 .subnav > ul > li > a {
+  background: #747171;
+  padding: 10px 15px;
+  margin: 0 2px;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  border-radius: 5px;
+}
+
+.Component2 .content {
+  background: rgb(63, 88, 76);
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
