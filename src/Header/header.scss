@@ -1,0 +1,43 @@
+@import "../styles/utils";
+
+.main-header {
+  background: $primary;
+  height: 10vh;
+  padding: 0 15px;
+
+  &__logo {
+    margin: 0.3rem 0;
+    color: #fff;
+    h1 a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  &__made-by {
+    margin: 0.3rem 0;
+    background: #2b0554;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+
+    &:hover {
+      text-decoration-color: #e31b6d;
+    }
+  }
+
+  &__accent {
+    color: #e31b6d;
+  }
+
+  @include sm {
+    height: 15vh;
+  }
+}
+
+.header-container {
+  @include container;
+}

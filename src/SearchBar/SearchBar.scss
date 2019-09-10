@@ -1,0 +1,74 @@
+@import "../styles/utils";
+
+.search-bar {
+  min-height: 15vh;
+  padding: 3rem 0;
+  background: $secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__header {
+    color: white;
+  }
+
+  &__submit-button {
+    border: none;
+    background: inherit;
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  &__box {
+    margin: 2.5rem 0;
+    width: 65%;
+
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+    height: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  &__input {
+    margin: 0 0.5rem;
+    border: none;
+    height: 100%;
+    width: 90%;
+    outline: none;
+
+    &::placeholder {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  &__paragraph {
+    font-size: 1.3rem;
+    color: #fff;
+    span {
+      color: #f6c024;
+    }
+  }
+
+  @include lg {
+    &__box {
+      width: 50%;
+    }
+  }
+  @include xl {
+    &__box {
+      width: 40%;
+    }
+  }
+}

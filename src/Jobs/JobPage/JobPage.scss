@@ -1,0 +1,153 @@
+@import "../../styles/utils";
+
+.job-page {
+  position: relative;
+  background: #fff;
+  min-height: 70vh;
+  padding: 4rem 2rem;
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    svg {
+      height: 100%;
+      fill: #17aaff;
+    }
+  }
+
+  &__details {
+    margin: 0 auto;
+    max-width: 992px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      margin: 1rem 0;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  &__tag {
+    background: #eff2f7;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0.3rem;
+    padding: 0.5rem;
+    color: #000;
+
+    p {
+      color: #303e4e;
+    }
+
+    &--category {
+      background: $accent2;
+      border: none;
+      color: #fff;
+    }
+  }
+
+  &__logo-border {
+    height: 11rem;
+    width: 11rem;
+    border-radius: 15px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(135deg, $primary, #00c87a);
+    padding: 3px;
+  }
+
+  &__logo {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: fill;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 15px;
+  }
+
+  &__letter {
+    height: 4rem;
+    width: 4rem;
+    display: table;
+    p {
+      color: #a1a1a1;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  &__company {
+    font-size: 2rem;
+
+    a {
+      //   text-decoration: none;
+      color: #444;
+    }
+  }
+
+  &__markdown {
+    color: rgba(0, 0, 0, 0.84);
+    max-width: 992px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.58;
+    margin: 3rem 0;
+
+    p {
+      margin: 1.4rem 0;
+    }
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 1.4rem;
+
+      margin: 1.4rem 0;
+      li {
+        list-style-type: disc;
+
+        p {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+
+  &__apply {
+    background: #00c87a;
+    color: #fff;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

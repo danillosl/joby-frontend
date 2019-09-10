@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./Header/Header";
-import Component1 from "./Component1/Component1Container";
-import Component2 from "./Component2/Component2Container";
-import Component3 from "./Component3/Component3Container";
+import Footer from "./Footer/Footer";
+import MainPage from "./mainPage/MainPage";
+import JobPage from "./Jobs/JobPage/JobPage";
+import Page404 from "./404/Page404";
 
 function App() {
   return (
@@ -15,13 +16,15 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <div className="content">
-            <Switch>
-              <Route path="/component1" component={Component1} />
-              <Route path="/component2" component={Component2} />
-              <Route path="/component3" component={Component3} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route path="/" exact component={MainPage} />
+            <Route path="/search/:search" component={MainPage} />
+            <Route path="/company/:name" component={MainPage} />
+            <Route path="/tag/:tag" component={MainPage} />
+            <Route path="/job/:id" component={JobPage} />
+            <Route component={Page404} />
+          </Switch>
+          <Footer />
         </div>
       </Router>
     </Provider>

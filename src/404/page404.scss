@@ -1,0 +1,27 @@
+@import "../styles/utils";
+
+.page404 {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+  text-align: center;
+
+  h1 {
+    font-family: montserrat, sans-serif;
+
+    font-size: 252px;
+    font-weight: 900;
+    margin: 0;
+    color: $primary;
+    text-transform: uppercase;
+  }
+  span {
+    text-shadow: -8px 0 0 #fff;
+  }
+  a {
+    color: $primary;
+  }
+}

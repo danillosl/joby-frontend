@@ -1,0 +1,88 @@
+@import "variables";
+
+@function custom-vh($vh) {
+  @return calc(var(--vh, 1vh) * #{$vh});
+}
+
+@mixin custom-vh($vh) {
+  height: #{$vh}vh;
+  height: custom-vh($vh);
+}
+
+@mixin sm {
+  @media only screen and  (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+@mixin md {
+  @media only screen and (min-width: #{$screen-md}) and  (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media only screen and (min-width: #{$screen-lg}) and  (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media only screen and (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin md-min-width {
+  @media only screen and (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin md-max-width {
+  @media only screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+  font-size: calc(
+    #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))})
+  );
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range) {
+    font-size: $max-font-size;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+html {
+  @include fluid-type($min_font, $max_font, $min_width, $max_width);
+}
+
+@mixin container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-width;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  @include sm {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
