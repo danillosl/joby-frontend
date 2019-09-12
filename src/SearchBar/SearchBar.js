@@ -15,6 +15,10 @@ class SearchBar extends Component {
 
     evt.preventDefault();
 
+    if (!searchTerm) {
+      return;
+    }
+
     this.props.history.push(`/search/${searchTerm}`);
   };
   render() {
