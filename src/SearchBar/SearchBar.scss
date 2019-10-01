@@ -9,6 +9,9 @@
   align-items: center;
   text-align: center;
 
+  i {
+    color: blue;
+  }
   &__form {
     width: 100%;
     display: flex;
@@ -21,6 +24,7 @@
   }
 
   &__submit-button {
+    cursor: pointer;
     border: none;
     background: inherit;
     i {

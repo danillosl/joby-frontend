@@ -29,7 +29,7 @@ class SearchBar extends Component {
           <div className="search-bar__box">
             <input placeholder="job description, tag, category..." className="search-bar__input" type="text" name="search-term" id="search-term" onChange={this.handleChange} value={this.props.searchTerm} />
             <button className="search-bar__submit-button">
-              <i style={{ color: "blue" }} className="fas fa-search" />
+              <i className="fas fa-search" />
             </button>
           </div>
           <p className="search-bar__paragraph">
