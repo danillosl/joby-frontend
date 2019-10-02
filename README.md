@@ -1,2 +1,2 @@
-# react-boilerplate
-react redux and react-router boilerplate project with advanced architecture
+# joby-frontend
+frontend project of https://www.joby.tech.
